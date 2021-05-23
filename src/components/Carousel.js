@@ -15,7 +15,7 @@ function CarouselComp() {
     return (
         <div>
             <div className="row py-3">
-                <div className="col-9">
+                <div className="col-lg-9 col-md-12">
 
                     <Carousel activeIndex={index} onSelect={handleSelect}>
                         <Carousel.Item>
@@ -42,9 +42,9 @@ function CarouselComp() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <div className="col-3">
-                    <img src="https://tpc.googlesyndication.com/simgad/859822793315136415" alt="" />
-                    <img src="https://tpc.googlesyndication.com/simgad/10374724182842071294" className='my-3' alt="" />
+                <div className="col-3 ads">
+                    <img src="https://tpc.googlesyndication.com/simgad/859822793315136415" className='img-fluid' alt="" />
+                    <img src="https://tpc.googlesyndication.com/simgad/10374724182842071294" className='my-3 img-fluid' alt="" />
                 </div>
             </div>
         </div>

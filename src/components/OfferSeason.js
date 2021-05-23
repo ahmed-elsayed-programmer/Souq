@@ -8,11 +8,11 @@ function OfferSeason(props) {
                     <a class="nav-link active" aria-current="page" href="/">Gaming week</a>
                 </li>
             </ul>
-            <div className="col-6">
+            <div className="col-md-12 col-lg-6">
                 <img src="https://souqcms.s3-eu-west-1.amazonaws.com/cms/boxes/img/desktop/1620758156_banner-1.jpg" className='img-fluid' alt="" />
                 <h4 className='py-2'>title</h4>
             </div>
-            <div className="col-6">
+            <div className="col-md-12 col-lg-6">
                 <div className="row g-3 text-center">
 
                     <div className="col-6">
