@@ -4,7 +4,7 @@ import Header from './components/Header'
 
 const App = () => {
     return (
-        <div className="app bg-light">
+        <div className="app bg-light contanier">
             <Header />
             <Home />
         </div>
