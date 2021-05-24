@@ -17,6 +17,7 @@ function Home() {
             <Ads image="https://souqcms.s3-eu-west-1.amazonaws.com/sanfronto/eg/2020/web/Banners/HPs/Sep/Installment-en.jpg" />
             <Ads image="https://cms.souqcdn.com/sanfronto/eg/2018/Web/Banners/HP-Strip/Free-Shipping-en.png" />
             <CardProduct />
+            <CardProduct/> 
         </div>
     )
 }

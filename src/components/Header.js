@@ -1,9 +1,24 @@
-import React from 'react';
+import { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import { NavDropdown } from 'react-bootstrap';
+import CheeseburgerMenu from 'cheeseburger-menu'
+import HamburgerMenu from 'react-hamburger-menu'
+import MenuContent from './MenuContent'
 import './css/header.css';
 
+
 const Header = () => {
+    const [menuOpen, setMenu] = useState(false);
+
+    const openMenu = () => {
+        setMenu(true)
+    }
+
+    function closeMenu() {
+        setMenu(false)
+    }
+
+
     return (
         <div className="header ">
             <div className="header_content bg-dark text-light px-4">
@@ -25,11 +40,31 @@ const Header = () => {
                 </div>
             </div>
 
+
             <nav class="navbar navbar-light ">
                 <div class="container-fluid">
 
+                    <CheeseburgerMenu
+                        isOpen={menuOpen}
+                        closeCallback={closeMenu}>
+                        <MenuContent closeCallback={closeMenu} />
+                    </CheeseburgerMenu>
 
-                    <a class="navbar-brand" href='/'>
+                    <HamburgerMenu
+                        isOpen={menuOpen}
+                        menuClicked={openMenu}
+                        width={32}
+                        height={24}
+                        strokeWidth={3}
+                        rotate={0}
+                        color='black'
+                        borderRadius={0}
+                        animationDuration={0.5}
+                    />
+
+
+
+                    <a class="navbar-brand mx-3" href='/'>
                         <img src="https://cf1.s3.souqcdn.com/public/style/img/en/souqAmazon-logo-v2.png" alt="" width="115" height='48' class="d-inline-block align-text-top" />
                     </a>
 
