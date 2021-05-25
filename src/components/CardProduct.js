@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Carousel } from "react-bootstrap";
+import Carousel from 'react-elastic-carousel';
 import Card from './Card'
 
 
@@ -18,7 +18,8 @@ function CardProduct() {
             'https://cf1.s3.souqcdn.com/item/2021/01/28/13/23/21/54/0/item_L_132321540_1b1e920a0abcf.jpg',
             'https://cf5.s3.souqcdn.com/item/2021/01/30/13/23/26/42/8/item_L_132326428_9f882ea68882b.jpg',
             'https://cf2.s3.souqcdn.com/item/2021/03/03/13/24/51/22/6/item_L_132451226_574e01f4989b9.jpg',
-            'https://cf3.s3.souqcdn.com/item/2021/02/20/13/24/01/02/9/item_L_132401029_1cf353bf7154e.jpg'
+            'https://cf2.s3.souqcdn.com/item/2020/01/07/10/29/52/84/0/item_XL_102952840_7aa943b3f9bec.jpg'
+
         ]
     }
 
@@ -28,40 +29,32 @@ function CardProduct() {
                 <div className="col-12">
 
                     <Carousel activeIndex={index} onSelect={handleSelect} className='text-dark'>
+                        <div className="row">
+                            {a.image.map(img =>
+                                <div className='col-lg-2 col-md-4'>
+                                    <Card img={img} />
+                                </div>
+                            )}
 
-                        <Carousel.Item>
-                            <div className="row">
-                                {a.image.map(img =>
-                                    <div className='col-lg-2 col-md-4'>
-                                        <Card img={img} />
-                                    </div>
-                                )}
-                            </div>
+                        </div>
 
-                        </Carousel.Item>
+                        <div className="row">
+                            {a.image.map(img =>
+                                <div className='col-lg-2 col-md-4'>
+                                    <Card img={img} />
+                                </div>
+                            )}
 
-                        <Carousel.Item>
-                            <div className="row">
-                                {a.image.map(img =>
-                                    <div className='col-lg-2 col-md-4'>
-                                        <Card img={img} />
-                                    </div>
-                                )}
-                            </div>
+                        </div>
 
-                        </Carousel.Item>
+                        <div className="row">
+                            {a.image.map(img =>
+                                <div className='col-lg-2 col-md-4'>
+                                    <Card img={img} />
+                                </div>
+                            )}
 
-                        <Carousel.Item>
-                            <div className="row">
-                                {a.image.map(img =>
-                                    <div className='col-lg-2 col-md-4'>
-                                        <Card img={img} />
-                                    </div>
-                                )}
-                            </div>
-
-                        </Carousel.Item>
-
+                        </div>
                     </Carousel>
                 </div>
             </div>
