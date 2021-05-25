@@ -1,32 +1,33 @@
-import React, { Component } from 'react'
 // import './menuContent.css'
 
-class MenuContent extends Component {
-  constructor(props) {
-    super(props)
+const MenuContent = () => {
 
-    this.items = []
-    for (let i=1; i<=5; i++) {
-      this.items.push(i)
-    }
-  }
 
-  render() {
-    return (
-      <div className="menu">
-        {this.items.map(i => <div className="menu-item" key={i}>
-          <a
-            href="https://github.com/Middlerun/cheeseburger-menu"
-            onClick={this.props.closeCallback}
-            target="blank">
-            Menu item {i}
-          </a>
-        </div>)}
+  return (
+    <div className="menu bg-dark h-100">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action list-group-item-dark">Home</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Track Orders</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">My Account</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Customer Service</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Newsfeed</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Mobiles</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Home Appliances</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Computers</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">electronics</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">fashion</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">market</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Home , kitchen and tools</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Books</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Games</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Health</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Sports</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">Sports</li>
 
-        <p className="hint">Click outside the menu to close it, or swipe it closed on touch device</p>
-      </div>
-    )
-  }
+      </ul>
+    </div>
+  )
+
 }
 
 

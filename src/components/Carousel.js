@@ -10,7 +10,7 @@ function CarouselComp() {
             <div className="row py-3">
                 <div className="col-lg-9 col-md-12">
 
-                    <Carousel>
+                    <Carousel autoPlaySpeed='5000' enableAutoPlay={true}>
                     
                             <img
                                 className="d-block w-100"

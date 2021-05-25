@@ -1,15 +1,9 @@
 
-import React, { useState } from "react";
 import Carousel from 'react-elastic-carousel';
 import Card from './Card'
 
 
 function CardProduct() {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-    };
 
     let a = {
         image: [
@@ -28,7 +22,9 @@ function CardProduct() {
             <div className="row py-3">
                 <div className="col-12">
 
-                    <Carousel activeIndex={index} onSelect={handleSelect} className='text-dark'>
+                    <Carousel itemsToScroll={0.4}  >
+
+
                         <div className="row">
                             {a.image.map(img =>
                                 <div className='col-lg-2 col-md-4'>
@@ -37,6 +33,8 @@ function CardProduct() {
                             )}
 
                         </div>
+
+
 
                         <div className="row">
                             {a.image.map(img =>

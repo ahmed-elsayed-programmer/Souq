@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import './css/header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { NavDropdown } from 'react-bootstrap';
 import CheeseburgerMenu from 'cheeseburger-menu'
 import HamburgerMenu from 'react-hamburger-menu'
 import MenuContent from './MenuContent'
-import './css/header.css';
 
 
 const Header = () => {
@@ -46,20 +46,22 @@ const Header = () => {
 
                     <CheeseburgerMenu
                         isOpen={menuOpen}
-                        closeCallback={closeMenu}>
+                        closeCallback={closeMenu} 
+                        >
                         <MenuContent closeCallback={closeMenu} />
                     </CheeseburgerMenu>
 
                     <HamburgerMenu
                         isOpen={menuOpen}
                         menuClicked={openMenu}
-                        width={32}
-                        height={24}
+                        width={30}
+                        height={20}
                         strokeWidth={3}
                         rotate={0}
-                        color='black'
+                        color='blue'
                         borderRadius={0}
                         animationDuration={0.5}
+
                     />
 
 
